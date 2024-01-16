@@ -10,12 +10,6 @@ let currentCircle = 0;
 let time;
 let currentStep = 1;
 
-const obj = {
-  plan:null,
-  kind:null,
-  price:null,
-}
-
 steps.forEach((step) => {
   const nextBtn = step.querySelector(".next-stp");
   const prevBtn = step.querySelector(".prev-stp");
@@ -40,6 +34,12 @@ steps.forEach((step) => {
     summary(obj);
   });
 });
+
+const obj = {
+  plan:null,
+  kind:null,
+  price:null,
+}
 function validateForm() {
   let valid = true;
   for (let i = 0; i < formInputs.length; i++) {
